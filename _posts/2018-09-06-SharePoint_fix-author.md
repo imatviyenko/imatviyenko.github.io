@@ -14,7 +14,7 @@ found. at Microsoft.SharePoint.SPUserCollection.get_Item(String loginName)     a
 Microsoft.SharePoint.ServerStub.SPFileServerStub.GetProperty(Object target, String propName, ProxyContext proxyContext) at
 Microsoft.SharePoint.Client.ServerStub.GetPropertyWithMonitoredScope(Object target, String propertyName, ProxyContext proxyContext)
 ```
-In our specific case, we got this error when a SharePoint add-in custom code executed CSOM call against SharePoint to retrieve the list of attachment for a list item (electronic form), all stored in one folder in a document library. The error only surfaced for those files uploaded by users who since they did it has had their Active Directory login (samAccountName) changed. Those users were all ladies, changing their family name to that of the husband. Now if anyone, including those same ladies authenticating under their new logins, tried to open the saved form, the following C# code was executed to read the associated attachments and failed with the above mentioned exception:
+In our specific case, we got this error when a SharePoint add-in custom code executed CSOM call against SharePoint to retrieve the list of attachment for a list item (electronic form), all stored in one folder in a document library. The error only surfaced for those files uploaded by users who since they did it has had their Active Directory login (samAccountName) changed. Those users were all ladies, changing their family name to that of the husband. Now if anyone, including those same ladies authenticating under their new logins, tried to open the saved form, the following C# code was executed to read the properties of the associated attachments and failed with the above mentioned exception:
 ```csharp
 private void BindAttachments()
 {
