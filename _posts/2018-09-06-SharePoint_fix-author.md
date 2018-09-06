@@ -1,7 +1,9 @@
 ---
 layout: post
-title: "SharePoint - fix authors of files uploaded to a document library to solve the 'User cannot be found' error"
+title: "SharePoint script - fix-authors.ps1"
+description: "PowerShell script for SharePoint to fix authors of files uploaded to a document library to solve the 'User cannot be found' error"
 date: 2018-09-06
+tags: SharePoint PowerShell scripts administration
 ---
 
 ## Problem description

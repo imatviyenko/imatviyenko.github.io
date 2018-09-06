@@ -22,13 +22,26 @@ a:hover {
 h1 {
     font-size: 3em;
     font-family:'Helvetica', 'Arial', 'Sans-Serif';
+    margin-bottom: 0.2em;
 }
-p, li {
+h2 {
+    font-size: 2em;
+    font-family:'Helvetica', 'Arial', 'Sans-Serif';
+    margin-bottom: 0.2em;
+}
+p {
     font-size: 1.5em;
     line-height: 1.4em;
     color: #333;
 }
+ul, ol {
+    font-size: 1.5em;
+    color: #333;
+}
 code {
+    font-size: 1.2em;
+}
+code.taglabel {
     font-size: 1.2em;
 }
 footer {
@@ -38,7 +51,11 @@ footer {
 
 ul.posts { 
     margin: 20px auto 40px; 
-    font-size: 1.5em;
+    font-size: 1.0em;
+}
+
+div.posts {
+    font-size: 1.3em;
 }
 
 ul.posts li {
