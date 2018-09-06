@@ -77,7 +77,7 @@ In order to solve this problem, I developed a PowerShell script **[fix-author](h
 
 The script **fix-author.ps1** is best used this way:
 1. Run it against a document library where problem files are located in the 'report' mode. The script will check all files in the doc lib for incorrect authors logins and generate a report, containing the list of all checked subfolders and files and the semicolon separated list of all found incorrect/missing logins. By default, the script outputs information in the console and you can also output the subfolder and files report to the standard out stream and further on to a file if you like (-StdOut switch piped to Out-File).
-2. Using the list of incorrect/missing logins produced at the first step, find a correct login for each bad one. Create a PowerShell hashtable with the mappings old_login->new_login.
-3. Run the script again in the 'fix' mode and feed the mappings hashtable from the step 2 as the -LoginsMapping argument.
+2. Using the list of incorrect/missing logins produced at the first step, find out the correct login for each bad one. Create a PowerShell hashtable with the mappings old_login->new_login.
+3. Run the script again in the 'fix' mode and feed the mappings hashtable from the step 2 as the -LoginMappings argument.
 
 Please use Get-Help (i.e. "Get-Help .\fix-author.ps1" or "Get-Help .\fix-author.ps1 -examples") for more details on the usage of this script.
