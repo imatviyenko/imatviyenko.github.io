@@ -21,27 +21,28 @@ There are a few notes:
 
 2. Start command prompt with the credentials of the service account that **has** access to the database and enter the password for the service account when prompted:
 ```
-runas.exe /user:*domain\service_account_name* cmd.exe
+runas.exe /user:domain\service_account_name cmd.exe
 ```
   
 
-3. Execute "sqlcmd" in the commmand prompt to start the SQL interactive shell.
+3. Execute "sqlcmd" in the command prompt to start the SQL interactive shell.
 
-4. Execute these TSQL command in a sequence:
-```
--- Check the current user name
+4. Execute these TSQL commands in a sequence:  
+
+```SQL
+-- Check the current user name - you must be running sqlcmd under the service account credentials
 select suser_sname()
 go
 
 use *Database_name*
 go
 
-create user [*domain\your_login_name*] for login [*domain\your_login_name*]
+create user [domain\your_login_name] for login [domain\your_login_name]
 go
 
 
 -- Add your login to the 'db_datareader' SQL database role in this example to grant read access to the data
-exec sp_addrolemember 'db_datareader', '*domain\your_login_name*'
+exec sp_addrolemember 'db_datareader', 'domain\your_login_name'
 go
 ```
 
