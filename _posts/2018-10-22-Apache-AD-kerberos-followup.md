@@ -54,13 +54,13 @@ setspn -s HTTP/server.company.com intra_app
 **Generate AES256 key - execute on a domain controller**  
 ktpass /out intra_app.keytab /princ intra_app@company.com -SetUPN /mapuser intra_app /crypto AES256-SHA1 /ptype KRB5_NT_PRINCIPAL /pass XXX -SetPass +DumpSalt /target dc1.company.com  
 
-*Note: Generate AES256 key and output it to the command prompt, so that you can mark and copy it to notepad. The keytab file created by this command will not be used and can be discarded. Also copy "vno" number to the notepad.*
+*Note: Generate AES256 key and output it to the command prompt, so that you can mark and copy it to notepad. The keytab file created by this command will not be used and can be discarded. Also copy "vno" number to the notepad. EXCLUDE THE '0x' PREFIX WHEN YOU SAVE THE GENERATED KEY VALUE IN THE NOTEPAD!*
 
 
 **Generate RC4 key - execute on a domain controller**  
 ktpass /out intra_app.keytab /princ intra_app@company.com -SetUPN /mapuser intra_app /crypto RC4-HMAC-NT /ptype KRB5_NT_PRINCIPAL /pass XXX -SetPass +DumpSalt /target dc1.company.com
 
-*Note: Generate RC4 key and output it to the command prompt, so that you can mark and copy it to notepad. The keytab file created by this command will not be used and can be discarded. Also copy "vno" number to the notepad.*
+*Note: Generate RC4 key and output it to the command prompt, so that you can mark and copy it to notepad. The keytab file created by this command will not be used and can be discarded. Also copy "vno" number to the notepad. EXCLUDE THE '0x' PREFIX WHEN YOU SAVE THE GENERATED KEY VALUE IN THE NOTEPAD!*
 
 
 **Modify apache config file - on the Linux box**  
