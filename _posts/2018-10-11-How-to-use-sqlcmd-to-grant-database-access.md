@@ -13,7 +13,7 @@ If your personal admin account does not have access to the SQL server database, 
 There are a few notes:
 - You have to be able to connect to the SQL server via RDP with OS admin privileges.
 - The service account **must** be dbowner for this method to work, which is usually the case.
-- There is a [alternative method](https://adamrehill.com/2017/02/13/how-to-grant-yourself-sysadmin-access-to-a-local-sql-server-database) which involves SQL instance restart with a special command line option.
+- There is an [alternative method](https://adamrehill.com/2017/02/13/how-to-grant-yourself-sysadmin-access-to-a-local-sql-server-database) which involves SQL instance restart with a special command line option.
  
 
 ## Step-by-step instructions
