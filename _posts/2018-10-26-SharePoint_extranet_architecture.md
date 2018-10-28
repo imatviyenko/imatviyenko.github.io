@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "SharePoint extranet architecture"
+title: "SharePoint Extranet architecture"
 description: "Building a corporate Extranet web site in SharePoint"
 date: 2018-10-26
 tags: SharePoint ADFS authentication
@@ -32,10 +32,8 @@ One other question that we need to answer - if we stick with the on-premises Sha
 ## Additional costs
 The decision to deploy a separate SharePoint farm for Extranet comes with its own price. This statement in [Microsoft article][Use SharePoint Online as a business-to-business (B2B) extranet solution] is quite true: *"...deploying a SharePoint on-premises extranet site involves complex configuration to establish security measures and governance, including granting access inside the corporate firewall, and expensive initial and on-going cost"*. In addition to the SharePoint farm, we will generally have to deploy many other supporting servers and services, such as AD domain controllers, load balancers, SQL servers, reverse proxy and ADFS servers. However, the initial costs associated with the deployment of such supporting infrastructure may be a good investment and will bring huge benefits in future. For example, an isolated AD forest/domain in the DMZ segment may well become the basis and authentication backend for other externally facing IT services beyond SharePoint Extranet portal. 
 
-## SharePoint Extranet architecture
-There are many choices we have to make when we design Extranet solution on SharePoint platform. In this article I will describe the configuration that we successfully deployed and have run for several years, but a good research of available options should be done for each new deployment to explore the alternatives and find the best solution in each case.
-
 **Example SharePoint Extranet architecture:**
+There are many choices we have to make when we design Extranet solution on SharePoint platform. In this article I will describe the configuration that we successfully deployed and have run for several years, but a good research of available options should be done for each new deployment to explore the alternatives and find the best solution in each case.
 
 ### Suggested implementation
 
