@@ -14,13 +14,13 @@ There are two completely different approaches to using Microsoft SharePoint for 
 - Cloud-based SharePoint Online (part of Office 365);
 - On-premises SharePoint farm.
 
-Microsoft suggests [here][Use SharePoint Online as a business-to-business (B2B) extranet solution] that SharePoint Online offers the most effective and easiest way to deploy Extranet solution. I agree with this, but sometimes it is not possible or desirable to use the cloud, and companies in many cases are only left with the on-premises option. Here are some reasons why company may decide that SharePoint Online in not on the table:
+Microsoft suggests [here][Use SharePoint Online as a business-to-business (B2B) extranet solution] that SharePoint Online offers the most effective and easiest way to deploy Extranet solution. I agree with this, but sometimes it is not possible or desirable to use the cloud, and companies in many cases are only left with the on-premises option. Here are some reasons why a company may decide that SharePoint Online in not on the table:
 - regulatory/legal restrictions in some countries, when it is prohibited to store and process certain types of information outside the countries boundaries;
 - Internet channel availability - when some of your users just can't access the O365 cloud;
 - application compatibility issues - some third-party or in-house developed SharePoint applications cannot be deployed to SharePoint Online (e.g., legacy farm solutions).
 
 ## Separate farm for Extranet
-One other question that we need to answer - if we stick with the on-premises SharePoint, why not just use the same single farm for Intranet and Extranet? I think that it's an option worth considering, especially for small companies where external access is limited to only few highly trusted entities. But for many larger companies this approach poses a number of challenges:
+One other question that we need to answer - if we stick with the on-premises SharePoint, why not just use the same single farm for Intranet and Extranet? I think that it's an option worth considering, especially for small companies where external access is limited to only few highly trusted entities. But for many larger companies this approach poses a number of challenges:  
 1) Do we need to publish the internal SharePoint farm to the Internet? Many companies have internal policies which restrict publishing of the internal servers and services to the Internet.
 2) If the farm is not published and the corporate users access it via VPN line when roaming, do we grant VPN access to all those external partners and customers as well?
 3) Even if we decide to publish the internal SharePoint farm to the Internet, how do we authenticate external users? Do we create logins in the internal corporate AD domain for each customer and partner? Most companies where IT security issues are taken seriously, will never do this. 
